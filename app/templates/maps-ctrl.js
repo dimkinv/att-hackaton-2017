@@ -9,7 +9,7 @@ angular.module('app').controller('mapCtrl', ($scope) => {
     }, 800);
 
     var oldLocation = { lat: 0, lng: 0 };
-    var marker;
+    var marker =  new google.maps.Marker();
     let playbackProgress = (param) => {
         param = JSON.parse(param);
         // logger.log(`milliseconds: ${param['playbackProgressMilliseconds']}`);
