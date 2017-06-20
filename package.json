@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":"rm -rf dist && mkdir dist && cd app && zip -r -X \"../dist/HyperVideo.zip\" * && cd ..",
+    "build":"rm -rf dist && mkdir dist && cd app && zip -r -X \"../dist/HyperVideo.zip\" * && cd .. ",
+    "remove":"wget -X \"DELETE\" http://tchosted.ucilab.com/plugin/HyperVideo && rm -rf HyperVideo*",
+    "post":"wget --header=\"Content-type: multipart/form-data boundary=FILEUPLOAD\" --post-file ./dist/HyperVideo.zip http://tchosted.ucilab.com/plugin",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
