@@ -1,5 +1,5 @@
-<div>
-    <label style='font-size: 24px; font-weight: bold;display: block;'>{{data[0].locationData.name}}</label>
-    <img ng-src="{{data[0].locationData.url}}" height='300' width='1028' style='padding-top: 10px; padding-bottom: 10px;'>
-    <div>{{data[0].locationData.description}}</div>
+<div ng-controller="locationCtrl">
+    <label style='font-size: 24px; font-weight: bold;display: block;'>{{locationData.name}}</label>
+    <img ng-src="{{locationData.picUrl}}" height='250' width='373' style='padding-top: 10px; padding-bottom: 10px;'>
+    <div style="text-align: justify;">{{locationData.description}}</div>
 </div>

@@ -15,6 +15,7 @@
 	<script src="main-ctrl.js"></script>
 	<script src="templates/maps-ctrl.js"></script>
 	<script src="templates/actors-ctrl.js"></script>
+	<script src="templates/location-ctrl.js"></script>
 </head>
 
 <body ng-controller="mainCtrl">
@@ -25,7 +26,7 @@
 			<button ng-click="changeScreen('maps')">Map</button>
 			<button ng-click="changeScreen('actors')">Actors</button>
 			<button ng-click="changeScreen('location')">Location Details</button>
-			<button ng-click="changeScreen('merchandise')">Merchandise</button>
+			<!--<button ng-click="changeScreen('merchandise')">Merchandise</button>-->
 		</div>
 		<div ng-include="currentTemplate"></div>
 	</div>

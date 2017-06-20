@@ -35,9 +35,10 @@ body{
 	text-decoration: none;
 	color: #333;
 }
+/*
 .actor-description:after{
-	/*content:'\25BA';
-	content:"\0003e";*/
+	!*content:'\25BA';
+	content:"\0003e";*!
 	content:"\203A";
 	position: absolute;
 	top: 50%;
@@ -45,4 +46,4 @@ body{
 	bottom: 0;
 	font-size: 32px;
 	color: #959595;
-}
+}*/
