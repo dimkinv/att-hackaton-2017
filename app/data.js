@@ -78,7 +78,7 @@ window.dataHack=[
     "startTime": "00:01:07,122",
     "endTime": "00:02:26,430",
     "map": {
-      "lat": "45.434068",
+      "lat": "45.434168",
       "lng": "12.334472"
     },
     "locationData": {
@@ -171,7 +171,7 @@ window.dataHack=[
     "startTime": "00:02:26,430",
     "endTime": "00:03:06,013",
     "map": {
-      "lat": "45.434068",
+      "lat": "45.434268",
       "lng": "12.334472"
     },
     "locationData": {

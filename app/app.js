@@ -11,7 +11,7 @@ $(function () {
 	setTimeout(() => {
 		loadCustomVideo();
 		isVideoLoaded = true;
-	}, 2000)
+	}, 3000)
 });
 
 let logger = {};
@@ -27,7 +27,6 @@ logger.error = function (message) {
 }
 
 function onEvent(evt, param) {
-	logger.log(`emitting event ${evt}`)
 	emitter.emit(evt, param);
 }
 
@@ -41,4 +40,16 @@ function initMap() {
 		position: uluru,
 		map: map
 	});
+}
+
+function stringTimeToMillis(stringTime) {
+	let parts = stringTime.split(':');
+	let time = +parts[1] * 60;
+
+	let millisParts = parts[2].split(',');
+	time += +millisParts[0];
+	time *= 1000;
+	time += +millisParts[1];
+
+	return time;
 }
