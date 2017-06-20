@@ -1,7 +1,6 @@
-button.red {
-	background:red;
+body{
+	color: #333;
 }
-
 .tabs{
 }
 
@@ -22,4 +21,28 @@ button.red {
 #response-content{
 	float: right;
 	width: calc(100% - 200px);
+}
+
+.actor-details{
+	display: table-cell;
+	vertical-align: top;
+	text-align: justify;
+	padding-right: 16px;
+	position: relative;
+}
+
+.actor-description{
+	text-decoration: none;
+	color: #333;
+}
+.actor-description:after{
+	/*content:'\25BA';
+	content:"\0003e";*/
+	content:"\203A";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	bottom: 0;
+	font-size: 32px;
+	color: #959595;
 }

@@ -1,16 +1,11 @@
-<table>
-    <tr>
-        <th>Name</th>
-        <th style='white-space: nowrap;'>Name In Movie</th>
-        <th>Picture</th>
-        <th>Description</th>
-        <th style='white-space: nowrap;'>More Data</th>
-    </tr>
-    <tr ng-repeat="actor in data[0].actors">
-        <td>{{actor.name}}</td>
-        <td>{{actor.nameInMovie}}</td>
-        <td><img ng-src="{{actor.picUrl}}" height='150' width='150'></td>
-        <td>{{actor.description}}</td>
-        <td><a target='_blank' href="{{actor.moreDataUrl}}">More Data</a></td>
-    </tr>
-</table>
+<div ng-controller="actorsCtrl">
+    <div ng-repeat="actor in actors" style="margin-bottom: 15px;">
+        <div style="display: table-cell; vertical-align: top; padding-right: 10px;">
+            <img ng-src="{{actor.picUrl}}" height='132' width='89'>
+        </div>
+        <div class="actor-details">
+            <div style="padding-bottom: 6px;"><b>{{actor.name}}</b> as <b>{{actor.nameInMovie}}</b></div>
+            <a class="actor-description" target='_blank' href="{{actor.moreDataUrl}}">{{actor.description}}</a>
+        </div>
+    </div>
+</div>
