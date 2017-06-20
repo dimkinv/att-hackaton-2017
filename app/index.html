@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app" class="no-js">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
 	<link rel="stylesheet" href="app.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
-	<!--<script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBucq2itLQ7HrRiT4_fAnW6lWtwgDppO2A">
-	</script>-->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1lGQrVLLonZFPOg9f6kDeNOG5-0oIZmc"></script>
+	<script src="directv-api.js"></script>
 	<script src="data.js"></script>
 	<script src="api.js"></script>
 	<script src="app.js"></script>
 	<script src="main-ctrl.js"></script>
+	<script src="templates/maps-ctrl.js"></script>
 </head>
 
 <body ng-controller="mainCtrl">
+	<button type="button" ng-click="showLog = !showLog">toggle log</button>
+	<pre id="log_content" ng-show="showLog"></pre>
 	<div>
 		<div class="tabs">
 			<button ng-click="changeScreen('maps')">Map</button>
@@ -22,7 +25,6 @@
 			<button ng-click="changeScreen('location')">Location Details</button>
 			<button ng-click="changeScreen('merchandise')">Merchandise</button>
 		</div>
-		<div id="response-content">{{test}}</div>
 		<div ng-include="currentTemplate"></div>
 	</div>
 </body>

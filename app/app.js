@@ -1,42 +1,36 @@
-
-
 var $log;
 
 $(function () {
 	$log = $('#log_content');
-	console.log('ver 1.1.0');
+	logger.log('ver 1.1.1');
+
+	loadCustomVideo();
 });
 
-function playVideo() {
-	try {
-		console.log('before switch video clicked');
-		DFW.switchChannel('http://tchosted.ucilab.com/video/Inferno_s.mp4', 'Bunny', 1993, 192);
-		console.log('after switch video clicked');
-	} catch (ex) {
-		console.error(ex);
+let logger = {};
+logger.log = function (message) {
+	if (typeof message !== 'string') {
+		message = JSON.stringify(message, null, 2);
 	}
+	$log.html(`${$log.html()} \n log: ${message}`);
 }
 
-function stopVideo() {
-	DFW.pause();
+logger.error = function (message) {
+	$log.html(`${$log.html()} \n error: ${message}`);
 }
-
-function resumeVideo() {
-	DFW.play();
-}
-
-// console.log = function (message) {
-// 	if (typeof message !== 'string') {
-// 		message = JSON.stringify(message, null, 2);
-// 	}
-// 	$log.html(`${$log.html()} \n log: ${message}`);
-// }
-
-// console.error = function (message) {
-// 	$log.html(`${$log.html()} \n error: ${message}`);
-// }
-
 
 function onEvent(evt) {
-	console.log(evt);
-} 
+	logger.log(evt);
+}
+
+function initMap() {
+	var uluru = { lat: -25.363, lng: 131.044 };
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 4,
+		center: uluru
+	});
+	var marker = new google.maps.Marker({
+		position: uluru,
+		map: map
+	});
+}

@@ -1,9 +1,9 @@
 {
 	"name": "HyperVideo",
 	"creator": "Danny Vernovsky",
-	"version": "1.0.4",
+	"version": "1.0.7",
 	"first_dfw_supported": "1.0",
-	"type": "tab", 				
+	"type": "inline", 				
 	"tab_button_text": "Hyper Video",		
 	"inline_height": 1500,			
 	"launch_trigger": "tab", 		

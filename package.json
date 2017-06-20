@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":"rm -rf dist && mkdir dist && cd app && zip -r -X \"../dist/HyperVideoDanny.zip\" * && cd ..",
+    "build":"rm -rf dist && mkdir dist && cd app && zip -r -X \"../dist/HyperVideo.zip\" * && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
