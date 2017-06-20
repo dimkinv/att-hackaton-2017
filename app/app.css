@@ -3,20 +3,17 @@ button.red {
 }
 
 .tabs{
-	float: left;
-	width: 160px;
-	padding-right: 20px;
 }
 
 .tabs button{
-	display: block;
 	height: 30px;
 	color: #fff;
 	background-color: #204d74;
 	border-color: #122b40;
 	margin-bottom:10px;
 	cursor: pointer;
-	width: 100%;
+	min-width: 30px;
+	padding-right: 10px;
 }
 .tabs button:not(:first-child){
 	margin-top:10px;

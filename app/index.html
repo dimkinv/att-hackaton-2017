@@ -8,19 +8,19 @@
 	<!--<script async defer
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBucq2itLQ7HrRiT4_fAnW6lWtwgDppO2A">
 	</script>-->
+	<script src="data.js"></script>
 	<script src="api.js"></script>
 	<script src="app.js"></script>
 	<script src="main-ctrl.js"></script>
 </head>
 
 <body ng-controller="mainCtrl">
-	<h1>API Plugin!</h1>
 	<div>
 		<div class="tabs">
 			<button ng-click="changeScreen('maps')">Map</button>
 			<button ng-click="changeScreen('actors')">Actors</button>
-			<button onclick='openLocationHistory()'>Location Details</button>
-			<button onclick='openMerchandise()'>Merchandise</button>
+			<button ng-click="changeScreen('location')">Location Details</button>
+			<button ng-click="changeScreen('merchandise')">Merchandise</button>
 		</div>
 		<div id="response-content">{{test}}</div>
 		<div ng-include="currentTemplate"></div>
