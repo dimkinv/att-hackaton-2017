@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="Sample" class="no-js"> 
+<html lang="en" ng-app="Sample" class="no-js">
 <head>
-   <link rel="stylesheet" href="app.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="handlebars.min.js"></script>
-  <script src="api.js"></script> 
-  <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBucq2itLQ7HrRiT4_fAnW6lWtwgDppO2A">
+	</script>
+	<script src="api.js"></script>
 </head>
 <body>
-	<h1>API Plugin!</h1>
-	<input type='button' value='getAllChannels' onclick='getAllChannels()' />
-	<input type='button' value='getChannelSchedule' onclick='getChannelSchedule("fe180fbf-815a-14c8-7f88-470abd306026")' />
-	<input type='button' value='getProgramDetails' onclick='getProgramDetails("VIDEO_PROGRAM","9409fed9-de74-b565-c87c-46132285349c")' />
-	<input type='button' value='getSeriesDetails' onclick='getSeriesDetails("5e2c370f-ec7a-8d60-5de0-9a880420ca2e")' />
-	<input type='button' value='getSeasonDetails' onclick='getSeasonDetails("5e2c370f-ec7a-8d60-5de0-9a880420ca2e",1)' />
-	<input type='button' value='getGuide' onclick='getGuide()' />
-	<input type='button' value='getLastWatched' onclick='getLastWatched()' />
-	<input type='button' value='search' onclick='search("house")' />
-	<input type='button' value='getWhatsOnNow' onclick='getWhatsOnNow()' />
-	<input type='button' value='getContinueWatching' onclick='getContinueWatching()' />
-	<input type='button' value='getTopPicks' onclick='getTopPicks()' />
-	<input type='button' value='getPopularNow' onclick='getPopularNow()' />
-	<input type='button' value='getToken' onclick='getToken()' />
-  <div></div>
+<h1>API Plugin!</h1>
+<div>
+	<div class="tabs">
+		<!--<button onclick='getAllChannels()'>getAllChannels</button>
+		<button onclick='getChannelSchedule("fe180fbf-815a-14c8-7f88-470abd306026")'>getChannelSchedule</button>
+		<button onclick='getProgramDetails("VIDEO_PROGRAM","9409fed9-de74-b565-c87c-46132285349c")'>getProgramDetails</button>
+		<button onclick='getSeriesDetails("5e2c370f-ec7a-8d60-5de0-9a880420ca2e")'>getSeriesDetails</button>
+		<button onclick='getSeasonDetails("5e2c370f-ec7a-8d60-5de0-9a880420ca2e",1)'>getSeasonDetails</button>
+		<button onclick='getGuide()'>getGuide</button>
+		<button onclick='getLastWatched()'>getLastWatched</button>
+		<button onclick='search("house")'>search</button>
+		<button onclick='getWhatsOnNow()'>getWhatsOnNow</button>
+		<button onclick='getContinueWatching()'>getContinueWatching</button>
+		<button onclick='getTopPicks()'>getTopPicks</button>
+		<button onclick='getPopularNow()'>getPopularNow</button>
+		<button onclick='getToken()'>getToken</button>-->
+		<button onclick='openMap()'>Map</button>
+		<button onclick='openActor()'>Actors</button>
+		<button onclick='openLocationHistory()'>Location Details</button>
+		<button onclick='openMerchandise()'>Merchandise</button>
+	</div>
+	<div id="response-content"></div>
+</div>
 
-	
 </body>
 </html>
