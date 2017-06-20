@@ -1,10 +1,17 @@
+var emitter = new TinyEmitter();
 var $log;
-
+var isVideoLoaded;
 $(function () {
 	$log = $('#log_content');
 	logger.log('ver 1.1.1');
 
-	loadCustomVideo();
+	if (isVideoLoaded) {
+		return;
+	}
+	setTimeout(() => {
+		loadCustomVideo();
+		isVideoLoaded = true;
+	}, 2000)
 });
 
 let logger = {};
@@ -19,8 +26,9 @@ logger.error = function (message) {
 	$log.html(`${$log.html()} \n error: ${message}`);
 }
 
-function onEvent(evt) {
-	logger.log(evt);
+function onEvent(evt, param) {
+	logger.log(`emitting event ${evt}`)
+	emitter.emit(evt, param);
 }
 
 function initMap() {
