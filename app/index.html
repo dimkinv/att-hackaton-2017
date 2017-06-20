@@ -17,13 +17,13 @@
 	<h1>API Plugin!</h1>
 	<div>
 		<div class="tabs">
-			<button onclick='openMap()'>Map</button>
-			<button onclick='openActor()'>Actors</button>
+			<button ng-click="changeScreen('maps')">Map</button>
+			<button ng-click="changeScreen('actors')">Actors</button>
 			<button onclick='openLocationHistory()'>Location Details</button>
 			<button onclick='openMerchandise()'>Merchandise</button>
 		</div>
 		<div id="response-content">{{test}}</div>
-		<div id="log_content"></div>
+		<div ng-include="currentTemplate"></div>
 	</div>
 </body>
 
